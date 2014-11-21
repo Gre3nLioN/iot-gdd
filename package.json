@@ -12,7 +12,8 @@
     "morgan": "~1.3.0",
     "natural": "^0.1.28",
     "range-parser": "^1.0.2",
-    "serve-favicon": "~2.1.3"
+    "serve-favicon": "~2.1.3",
+    "mongoose": "~3.8.19"
   },
   "readmeFilename": "README.md",
   "gitHead": "ca56b2499cffd18cf7489184f1eecdd0435127c1",

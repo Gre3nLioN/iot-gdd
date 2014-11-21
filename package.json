@@ -1,0 +1,28 @@
+{
+  "name": "iot-gdd",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.8.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "express": "~4.9.0",
+    "morgan": "~1.3.0",
+    "natural": "^0.1.28",
+    "range-parser": "^1.0.2",
+    "serve-favicon": "~2.1.3"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "ca56b2499cffd18cf7489184f1eecdd0435127c1",
+  "description": "Internet of Things workshop for Google Developer day",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gre3nLioN/iot-gdd.git"
+  },
+  "author": "",
+  "license": "BSD"
+}

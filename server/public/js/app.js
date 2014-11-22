@@ -13,4 +13,3 @@ App.config(['$routeProvider', '$locationProvider',
     }
 ]);
 
-

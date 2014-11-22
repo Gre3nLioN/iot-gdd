@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var app = express();
 var mainRouter = require('./router');
 var router = express.Router();
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));

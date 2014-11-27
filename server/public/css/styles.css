@@ -238,3 +238,7 @@ span.chart-number {
 	padding: 1.5em;
 	font-weight: normal;
 }
+
+.app-bar, .app-bar-container{
+	background: #24AD2B;
+}

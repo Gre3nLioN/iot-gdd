@@ -18,13 +18,15 @@ var peopleInTheRoom = {
     left:0 ,
     enter: 0,
 }
-var peopleInTheRoom = 0;
-var newPeople = 0;
-var leftPeople= 0;
-var noiseLevel = 0;
+ 
+ 
+
 socket.on('new-noise', function(data){
-    console.log('noise',data);
-    $('.slide-number').html(data.volume);
+    var roundedVol = Math.round(data.volume * 10);
+    console.log('noise',roundedVol);
+    $('.slide-number').html(roundedVol);
+    TweenLite.to($('h1.live'), 3, {css:{fontSize: roundedVol + "px"}});
+    
 });
 socket.on('people-in', function(data){
     peopleInTheRoom.enter++;

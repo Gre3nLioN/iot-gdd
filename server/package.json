@@ -2,7 +2,7 @@
   "name": "iot-gdd",
   "version": "0.0.0",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server/app.js"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
@@ -13,7 +13,9 @@
     "natural": "^0.1.28",
     "range-parser": "^1.0.2",
     "serve-favicon": "~2.1.3",
-    "mongoose": "~3.8.19"
+    "mongoose": "~3.8.19",
+    "ejs": "*",
+    "socket.io": "^1.0.6"
   },
   "readmeFilename": "README.md",
   "gitHead": "ca56b2499cffd18cf7489184f1eecdd0435127c1",

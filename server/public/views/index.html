@@ -1,3 +1,42 @@
 <div>
-	<img src="/images/front.jpg">
+	<div class="dashboard">
+            <div class="small g-wide--1 g-medium--half">
+                
+                
+            </div> 
+            
+            <div class="g-wide--3 g-wide--last g-medium--half g--last">
+                <div class="main">
+		        	<h1 class="logo"> Rega<strong>.me </strong></h1>
+		        	<section class="app-bar-actions">
+		        	<!-- Put App Bar Buttons Here -->
+		        </div>
+		        <div class="stats">
+		        	<h2> Hola,<strong> Roberta </strong> esta bien </h2>
+		        	<h3><strong>Interno</strong>
+		        	<div class="stats-detail">
+		        		<h3>Humedad - {{stats.soilHumidity}} </h3>
+		        	</div>
+		        	<div class="stats-detail">
+		        		<h3>Temperatura - {{stats.soilTemperature}} C</h3>
+		        	</div>
+		        	<div class="stats-detail">
+		        		<h3>Ventiador - <span class="ventilator">{{status.ventilator}}</span></h3>
+		        	</div>
+		        	<div class="stats-detail">
+		        		<h3>Riego -  <span class="ventilator">{{status.irrigation}}</span></h3>
+		        	</div>
+		        </div>
+                <div class="small">
+                    <div>
+                        <svg id="chart"></svg>
+                    </div>
+                    <div class="valor">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+	
+
 </div>

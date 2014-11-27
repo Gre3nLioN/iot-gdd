@@ -49,7 +49,7 @@ module.exports = {
            
         };
         //Emit the message to any active dashboard
-        io.sockets.in(req.params.id).emit('status',statusMsg);
+        io.sockets.in(req.params.id).emit('stats',statusMsg);
         //return correct result
         res.json({status:statusMsg, success:true});
       },

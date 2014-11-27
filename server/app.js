@@ -84,7 +84,7 @@ io.sockets.on('connection', function (socket) {
       socket.join(data);
     });
 
-    //setup sockets
+    //setup sockets for demo.
     socket.on('some-noise', function (data) {
       console.log(data);
       io.emit('new-noise', data);
@@ -94,9 +94,33 @@ io.sockets.on('connection', function (socket) {
    
 });
 
-var peopleCount = 0;
 
-var router = mainRouter.initialize();
+
+
+
+
+app.use(router);
+
+var router = mainRouter.initialize(io);
+
+
+
+
+
+
+
+//This is for the demo proporses, can be delete in the future.
+var controllers = {};
+var fs = require('fs');
+
+var files = fs.readdirSync('routes');
+files.forEach(function(file){
+  var key = file.replace(/\.\w{2,3}$/, '');
+  controllers[key] = require('./routes/' + file);
+});
+
+router.get('/noise', controllers.views.noise);
+
 //TODO: too many routes requieres Sockets...
 
 serial.on('found', function(address, name) {
@@ -131,8 +155,16 @@ serial.on('found', function(address, name) {
 });
 
 serial.inquire();
-
-
-
+var peopleCount = 0;
+router.post('/people/in', function(req,res){
+  io.emit('people-in', {});
+  peopleCount++;
+  res.json({result:'OK'});
+});
+router.post('/people/out', function(req,res){
+  io.emit('people-out', {});
+  peopleCount--;
+  res.json({result:'OK'});
+});
 
 app.use(router);

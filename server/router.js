@@ -10,23 +10,22 @@ files.forEach(function(file){
 	controllers[key] = require('./routes/' + file);
 });
 
+
+
+var peopleCount = 0;
+
+
 module.exports = {
 
-	initialize: function(){
-		router.get('/', controllers.index.index);
-		//API-Plat
-		router.get('/plant/:plant:id', controllers.api.getPlant);
-		router.get('/plant/:plant_id/temperatura/:temp', controllers.api.getTemperature);
-		router.get('/plant/:plant_id/humidity/:temp', controllers.api.getHumidity);
-		router.get('/plant/:plant_id/light/:temp', controllers.api.getLight);
-		router.post('/plant/:plant_id/temperatura/:temp', controllers.api.setTemperature);
-		router.post('/plant/:plant_id/humidity/:humidity', controllers.api.setHumidity);
-		router.post('/plant/:plant_id/light/:light', controllers.api.setLight);
+	initialize: function(io){
+		//Content
+		router.get('/', controllers.views.index);
+		router.get('/dashboard/:id', controllers.views.dashboard);
 
-		//Noise
-		router.get('/noise',controllers.index.noise);
-
-		//Sockets
+		//API
+		router.get('/api/v1/plant/:id', function(req,res){controllers.api.getStatus(req,res,io)});
+		router.post('/api/v1/plant/:id/stats', function(req,res){controllers.api.postStatus(req,res,io)});
+		router.get('/api/v1/plant/:id/predict', function(req,res){controllers.api.predict(req,res,io)});
 
 		return router;
 	}

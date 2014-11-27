@@ -1,95 +1,64 @@
 
 var express = require('express');
+var plantsDB = require('../models/in-memory-plant.js');
 var router = express.Router();
 
-/* GET home page. */
+
 module.exports = {
 
-	getPlant: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-			res.send(plant);
-		});
+	getStatus: function(req, res,io) {
+  		console.log('getStatus',req.params.id );
+
+      plantsDB.get(req.params.id, function(data){
+
+        res.json({plant: data, success:true});
+      },function(e){
+        res.status(500);
+        res.json({error:e, success:false});
+      });
+  		
+	},
+  predict: function(req, res,io) {
+      console.log('predict',req.params.id );
+      
+      plantsDB.predict(req.params.id, function(data){
+        io.sockets.in(req.params.id).emit('predict',data);
+        res.json({plant: data, success:true});
+      },function(e){
+        res.status(500);
+        res.json({error:e, success:false});
+      });
+      
+  },
+
+	postStatus: function(req,res,io) {
+  		
+  		console.log('postStatus',req.params.id );
+  		var stats = {
+          envTemperature: parseFloat(req.body.envTemperature),
+          envHumidity: parseFloat(req.body.envHumidity),
+          envPressure: parseFloat(req.body.envPressure),
+          soilTemperature: parseFloat(req.body.soilTemperature),
+          soilHumidity: parseFloat(req.body.soilHumidity)
+      };
+      plantsDB.save(req.params.id, stats, 
+        function(data){
+          var statusMsg = {
+           id:req.params.id,
+           currentStats: stats
+           
+        };
+        //Emit the message to any active dashboard
+        io.sockets.in(req.params.id).emit('stats',statusMsg);
+        //return correct result
+        res.json({status:statusMsg, success:true});
+      },
+        function(e){
+          res.status(500);
+          res.json({error:e, success:false});
+      });
+
+  		
 	},
 
-	getTemperature: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(plant)
-				res.send(plant.temperature);
-		});		
-	},
-
-	getHumidity: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(plant)
-				res.send(plant.humidity);
-		});		
-	},
-
-	getLight: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(plant)
-				res.send(plant.light);
-		});		
-	},
-
-	setTemperature: function(req, res) {
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(!plant){
-				var plant = new Plant({
-					plant_id: req.params.plant_id,
-					temperature: req.params.temperature
-				});
-			}else{
-				plant.temperature = req.params.temperature;
-			}
-			plant.save(function (err, plant) {
-				if (err) return console.error(err);
-			});		
-		});		
-	},
-
-	setHumidity: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(!plant){
-				var plant = new Plant({
-					plant_id: req.params.plant_id,
-					humidity: req.params.humidity
-				});
-			}else{
-				plant.humidity = req.params.humidity;
-			}
-			plant.save(function (err, plant) {
-				if (err) return console.error(err);
-			});		
-		});		
-	},
-
-	setLight: function(req, res){
-		Plant.findOne({ 'plant_id': req.params.plant_id }, function (err, plant) {
-		    if (err) return handleError(err);
-			//check if plant already exist, and save the temperature
-			if(!plant){
-				var plant = new Plant({
-					plant_id: req.params.plant_id,
-					light: req.params.light
-				});
-			}else{
-				plant.light = req.params.light;
-			}
-			plant.save(function (err, plant) {
-				if (err) return console.error(err);
-			});		
-		});		
-	}
-	
 }

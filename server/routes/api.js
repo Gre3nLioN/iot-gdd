@@ -10,6 +10,7 @@ module.exports = {
   		console.log('getStatus',req.params.id );
 
       plantsDB.get(req.params.id, function(data){
+
         res.json({plant: data, success:true});
       },function(e){
         res.status(500);
@@ -17,6 +18,18 @@ module.exports = {
       });
   		
 	},
+  predict: function(req, res,io) {
+      console.log('predict',req.params.id );
+      
+      plantsDB.predict(req.params.id, function(data){
+        io.sockets.in(req.params.id).emit('predict',data);
+        res.json({plant: data, success:true});
+      },function(e){
+        res.status(500);
+        res.json({error:e, success:false});
+      });
+      
+  },
 
 	postStatus: function(req,res,io) {
   		

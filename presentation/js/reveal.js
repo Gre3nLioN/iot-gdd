@@ -378,7 +378,7 @@ var Reveal = (function(){
 
 		// Slide number
 		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'slide-number', '' );
-		dome.sliderNumber.id ='slide-number';
+
 		// State background element [DEPRECATED]
 		createSingletonNode( dom.wrapper, 'div', 'state-background', null );
 

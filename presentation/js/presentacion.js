@@ -25,19 +25,38 @@ socket.on('new-noise', function(data){
     var roundedVol = Math.round(data.volume * 10);
     console.log('noise',roundedVol);
     $('.slide-number').html(roundedVol);
-    TweenLite.to($('h1.live'), 3, {css:{fontSize: roundedVol + "px"}});
+    TweenLite.to($('h1.monster-inc'), 3, 
+        {css:{fontSize: roundedVol + "px"}});
     
 });
 socket.on('people-in', function(data){
     peopleInTheRoom.enter++;
     peopleInTheRoom.count++;
     console.log('in');
+    $('.people-in').html(peopleInTheRoom.enter)
+    $('.people-count span').html(peopleInTheRoom.count);
+    if (peopleInTheRoom.count % 10 === 0){
+        TweenMax.from($('div.toastie'), 4,
+            {css:{bottom:0, right:0, opacity:1}, 
+            ease:Quad.easeInOut
+        });
+        $('audio#toastie')[0].play()
+    }
 });
 socket.on('people-out', function(data){
     peopleInTheRoom.count--;
     peopleInTheRoom.left++;
     console.log('out');
+    $('.people-out').html(peopleInTheRoom.left);
+    $('.people-count span').html(peopleInTheRoom.count);
 });
+socket.on('people-room', function(data){
+    peopleInTheRoom.count = data.people;
+    console.log('people-out', data);
+    $('.people-count span').html(peopleInTheRoom.count);
+
+});
+
 
 
 // Full list of configuration options available here:

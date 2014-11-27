@@ -25,6 +25,9 @@ module.exports = {
 
 		//Noise
 		router.get('/noise',controllers.index.noise);
+
+		//Sockets
+
 		return router;
 	}
 

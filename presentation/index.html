@@ -22,6 +22,7 @@
 		<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="/css/main.css">
 
 
 		<!--[if lt IE 9]>
@@ -40,7 +41,7 @@
 				<section class="inicio" data-state="inicio"></section>
 				<section>
 
-					<h1> Como diseñar experiencias IOT? </h1>
+					<h1 class="monster-inc"> Como diseñar experiencias IOT? </h1>
 					<h2> #IOTGDGBA </h2>
 				
 				</section>
@@ -71,8 +72,22 @@
 				
 
 			</div>
-
+			<div class="people-count">
+				
+				<h1>
+					<small class="people-in"></small>
+					<span> </span>
+					<small class="people-out"></small>
+				</h1>
+				
+			</div>
 		</div>
+		<div class="toastie">
+			<img src="img/toastie.png">
+		</div>
+		<audio preload="auto" id="toastie" >
+              <source src="/audio/toastie.mp3" type="audio/ogg">
+            </audio>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>

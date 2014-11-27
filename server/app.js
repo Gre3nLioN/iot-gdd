@@ -9,7 +9,6 @@ var http = require('http');
 
 var app = express();
 var mainRouter = require('./router');
-var router = express.Router();
 // uncomment after placing your favicon in /public
 
 app.use(logger('dev'));
@@ -42,7 +41,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.use(mainRouter.initialize());
+
 
 module.exports = app;
 var server =http.createServer(app);
@@ -53,11 +52,13 @@ server.listen(app.get('port'), function(){
 //io sockets would address to all the web-clients talking to this nodejs server
 var io = require('socket.io')(server);
 
-var sockets = []
 io.sockets.on('connection', function (socket) {
-  console.log("connnect"); 
+  console.log("new connnect"); 
 
-  sockets.push(socket);
+  var onRoomMsg = {people: peopleCount};
+  socket.emit('people-room',onRoomMsg );
+
+
 
   //some web-client disconnects
   socket.on('disconnect', function (socket) {
@@ -85,8 +86,25 @@ io.sockets.on('connection', function (socket) {
       console.log(data);
       io.emit('new-noise', data);
     }); 
+
+      
+   
+});
+
+var peopleCount = 0;
+
+var router = mainRouter.initialize();
+//TODO: too many routes requieres Sockets...
+router.post('/people/in', function(req,res){
+  io.emit('people-in', {});
+  peopleCount++;
+  res.json({result:'OK'});
+});
+router.post('/people/out', function(req,res){
+  io.emit('people-out', {});
+  peopleCount--;
+  res.json({result:'OK'});
 });
 
 
-
-
+app.use(router);

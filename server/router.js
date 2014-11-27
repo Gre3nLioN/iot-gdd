@@ -4,7 +4,7 @@ var router = express.Router();
 
 var controllers = {};
 
-var files = fs.readdirSync('routes');
+var files = fs.readdirSync('./routes');
 files.forEach(function(file){
 	var key = file.replace(/\.\w{2,3}$/, '');
 	controllers[key] = require('./routes/' + file);

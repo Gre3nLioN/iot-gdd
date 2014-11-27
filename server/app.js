@@ -1,3 +1,5 @@
+var BTSP = require('bluetooth-serial-port');
+var serial = new BTSP.BluetoothSerialPort();
 var express = require('express');
 var path    = require('path');
 var favicon = require('serve-favicon');
@@ -96,16 +98,41 @@ var peopleCount = 0;
 
 var router = mainRouter.initialize();
 //TODO: too many routes requieres Sockets...
-router.post('/people/in', function(req,res){
-  io.emit('people-in', {});
-  peopleCount++;
-  res.json({result:'OK'});
+
+serial.on('found', function(address, name) {
+	serial.findSerialPortChannel(address, function(channel) {
+		serial.connect('00:13:01:24:71:78', channel, function() {
+			console.log('connected');
+
+			serial.on('data', function(buffer) {
+				if(buffer === 1){
+					router.post('/people/in', function(req,res){
+						io.emit('people-in', {});
+						peopleCount++;
+						res.json({result:'OK'});
+					});
+				}else if(buffer ===0){
+					router.post('/people/out', function(req,res){
+						io.emit('people-out', {});
+						peopleCount--;
+						res.json({result:'OK'});
+					});
+				}
+			});
+		}, function () {
+			console.log('cannot connect');
+		});
+
+		// close the connection when you're ready
+		serial.close();
+	}, function() {
+		console.log('found nothing');
+	});
 });
-router.post('/people/out', function(req,res){
-  io.emit('people-out', {});
-  peopleCount--;
-  res.json({result:'OK'});
-});
+
+serial.inquire();
+
+
 
 
 app.use(router);

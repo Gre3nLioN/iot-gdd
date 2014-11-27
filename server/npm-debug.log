@@ -1,0 +1,344 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bluetooth-serial-port',
+1 verbose cli   '--save' ]
+2 info using npm@2.1.8
+3 info using node@v0.10.30
+4 verbose node symlink /bin/node
+5 warn package.json iot-gdd@0.0.0 No README data
+6 warn package.json fs@0.0.2 fs is also the name of a node core module.
+7 warn package.json fs@0.0.2 No repository field.
+8 silly cache add args [ 'bluetooth-serial-port', null ]
+9 verbose cache add spec bluetooth-serial-port
+10 silly cache add parsed spec { raw: 'bluetooth-serial-port',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'bluetooth-serial-port',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 verbose addNamed bluetooth-serial-port@*
+12 silly addNamed semver.valid null
+13 silly addNamed semver.validRange *
+14 silly addNameRange { name: 'bluetooth-serial-port', range: '*', hasData: false }
+15 silly mapToRegistry name bluetooth-serial-port
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/bluetooth-serial-port
+19 verbose addNameRange registry:https://registry.npmjs.org/bluetooth-serial-port not in flight; fetching
+20 verbose request uri https://registry.npmjs.org/bluetooth-serial-port
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 19:34:57
+23 verbose request id 031de09893b68a0d
+24 http request GET https://registry.npmjs.org/bluetooth-serial-port
+25 http 200 https://registry.npmjs.org/bluetooth-serial-port
+26 silly get cb [ 200,
+26 silly get   { date: 'Thu, 27 Nov 2014 22:34:58 GMT',
+26 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly get     etag: '"EJVGYC3XXZ82A38H2YK5347ZU"',
+26 silly get     'content-type': 'application/json',
+26 silly get     'cache-control': 'max-age=60',
+26 silly get     'content-length': '37034',
+26 silly get     'accept-ranges': 'bytes',
+26 silly get     via: '1.1 varnish',
+26 silly get     age: '0',
+26 silly get     'x-served-by': 'cache-jfk1020-JFK',
+26 silly get     'x-cache': 'MISS',
+26 silly get     'x-cache-hits': '0',
+26 silly get     'x-timer': 'S1417127698.114261,VS0,VE87',
+26 silly get     vary: 'Accept',
+26 silly get     'keep-alive': 'timeout=10, max=50',
+26 silly get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'bluetooth-serial-port', range: '*', hasData: true }
+28 silly addNameRange versions [ 'bluetooth-serial-port',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.1.4',
+28 silly addNameRange     '0.1.5',
+28 silly addNameRange     '0.1.6',
+28 silly addNameRange     '0.1.7',
+28 silly addNameRange     '0.1.8',
+28 silly addNameRange     '0.1.9',
+28 silly addNameRange     '0.1.10',
+28 silly addNameRange     '0.1.11',
+28 silly addNameRange     '0.1.12',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.0.1',
+28 silly addNameRange     '1.0.2',
+28 silly addNameRange     '1.0.3',
+28 silly addNameRange     '1.0.4',
+28 silly addNameRange     '1.0.5',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.1.2',
+28 silly addNameRange     '1.1.3',
+28 silly addNameRange     '1.1.4' ] ]
+29 verbose addNamed bluetooth-serial-port@1.1.4
+30 silly addNamed semver.valid 1.1.4
+31 silly addNamed semver.validRange 1.1.4
+32 silly mapToRegistry name bluetooth-serial-port
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry uri https://registry.npmjs.org/bluetooth-serial-port
+36 verbose addRemoteTarball https://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz',
+37 verbose addRemoteTarball   'f6970ae417e4c772132392c0e888d4407255653e' ]
+38 info retry fetch attempt 1 at 19:34:58
+39 info attempt registry request try #1 at 19:34:58
+40 http fetch GET https://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz
+41 http fetch 200 https://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz
+42 silly fetchAndShaCheck shasum f6970ae417e4c772132392c0e888d4407255653e
+43 verbose addTmpTarball /tmp/npm-7058-3649f2c9/registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz not in flight; adding
+44 verbose addTmpTarball already have metadata; skipping unpack for bluetooth-serial-port@1.1.4
+45 silly cache afterAdd bluetooth-serial-port@1.1.4
+46 verbose afterAdd /root/.npm/bluetooth-serial-port/1.1.4/package/package.json not in flight; writing
+47 verbose afterAdd /root/.npm/bluetooth-serial-port/1.1.4/package/package.json written
+48 silly install resolved [ { name: 'bluetooth-serial-port',
+48 silly install resolved     version: '1.1.4',
+48 silly install resolved     description: 'Bluetooth serial port communication for Node.js',
+48 silly install resolved     author: { name: 'Eelco Cramer', email: 'eelco@hailendal.org' },
+48 silly install resolved     keywords: [ 'bluetooth', 'serial port', 'rfcomm', 'linux', 'os x', 'windows' ],
+48 silly install resolved     homepage: 'https://github.com/eelcocramer/node-bluetooth-serial-port',
+48 silly install resolved     bugs: { url: 'https://github.com/eelcocramer/node-bluetooth-serial-port/issues' },
+48 silly install resolved     repository:
+48 silly install resolved      { type: 'git',
+48 silly install resolved        url: 'https://github.com/eelcocramer/node-bluetooth-serial-port' },
+48 silly install resolved     directories: { lib: './lib' },
+48 silly install resolved     main: './lib/bluetooth-serial-port.js',
+48 silly install resolved     os: [ 'darwin', 'linux', 'win32' ],
+48 silly install resolved     dependencies: { bindings: '1.1.x' },
+48 silly install resolved     engines: { node: '>= 0.8.x', npm: '>= 1.1.x' },
+48 silly install resolved     scripts: { install: 'node-gyp configure build' },
+48 silly install resolved     license: 'BSD-2-Clause',
+48 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+48 silly install resolved     _id: 'bluetooth-serial-port@1.1.4',
+48 silly install resolved     _shasum: 'f6970ae417e4c772132392c0e888d4407255653e',
+48 silly install resolved     _from: 'bluetooth-serial-port@*',
+48 silly install resolved     _npmVersion: '1.4.10',
+48 silly install resolved     _npmUser: { name: 'eelco', email: 'eelco@hailendal.org' },
+48 silly install resolved     maintainers: [ [Object], [Object] ],
+48 silly install resolved     dist:
+48 silly install resolved      { shasum: 'f6970ae417e4c772132392c0e888d4407255653e',
+48 silly install resolved        tarball: 'http://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz' },
+48 silly install resolved     _resolved: 'https://registry.npmjs.org/bluetooth-serial-port/-/bluetooth-serial-port-1.1.4.tgz' } ]
+49 info install bluetooth-serial-port@1.1.4 into /home/gre3nlion/Documents/proyectos/iot-gdd/server
+50 info installOne bluetooth-serial-port@1.1.4
+51 verbose installOne of bluetooth-serial-port to /home/gre3nlion/Documents/proyectos/iot-gdd/server not in flight; installing
+52 verbose lock using /root/.npm/_locks/bluetooth-serial-port-358e211b3d8c682b.lock for /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+53 silly install write writing bluetooth-serial-port 1.1.4 to /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+54 silly cache addNamed cb bluetooth-serial-port@1.1.4
+55 verbose unbuild node_modules/bluetooth-serial-port
+56 verbose gentlyRm vacuuming /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+57 verbose tar unpack /root/.npm/bluetooth-serial-port/1.1.4/package.tgz
+58 verbose tar unpacking to /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+59 verbose gentlyRm vacuuming /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+60 silly gunzTarPerm modes [ '755', '644' ]
+61 silly gunzTarPerm extractEntry package.json
+62 silly gunzTarPerm extractEntry README.md
+63 silly gunzTarPerm extractEntry LICENSE.md
+64 silly gunzTarPerm extractEntry binding.gyp
+65 silly gunzTarPerm extractEntry lib/bluetooth-serial-port.js
+66 silly gunzTarPerm extractEntry lib/device-inquiry.js
+67 silly gunzTarPerm extractEntry src/BTSerialPortBinding.h
+68 silly gunzTarPerm extractEntry src/DeviceINQ.h
+69 silly gunzTarPerm extractEntry src/linux/BTSerialPortBinding.cc
+70 silly gunzTarPerm extractEntry src/linux/BluetoothSerialPort.cc
+71 silly gunzTarPerm extractEntry src/linux/DeviceINQ.cc
+72 silly gunzTarPerm extractEntry src/osx/BTSerialPortBinding.mm
+73 silly gunzTarPerm extractEntry src/osx/BluetoothDeviceResources.h
+74 silly gunzTarPerm extractEntry src/osx/BluetoothDeviceResources.mm
+75 silly gunzTarPerm extractEntry src/osx/BluetoothSerialPort.mm
+76 silly gunzTarPerm extractEntry src/osx/BluetoothWorker.h
+77 silly gunzTarPerm extractEntry src/osx/BluetoothWorker.mm
+78 silly gunzTarPerm extractEntry src/osx/DeviceINQ.mm
+79 silly gunzTarPerm extractEntry src/osx/pipe.c
+80 silly gunzTarPerm extractEntry src/osx/pipe.h
+81 silly gunzTarPerm extractEntry src/windows/BTSerialPortBinding.cc
+82 silly gunzTarPerm extractEntry src/windows/BluetoothHelpers.cc
+83 silly gunzTarPerm extractEntry src/windows/BluetoothHelpers.h
+84 silly gunzTarPerm extractEntry src/windows/BluetoothSerialPort.cc
+85 silly gunzTarPerm extractEntry src/windows/DeviceINQ.cc
+86 info preinstall bluetooth-serial-port@1.1.4
+87 silly prepareForInstallMany adding bindings@1.1.x from bluetooth-serial-port dependencies
+88 silly cache add args [ 'bindings@1.1.x', null ]
+89 verbose cache add spec bindings@1.1.x
+90 silly cache add parsed spec { raw: 'bindings@1.1.x',
+90 silly cache add   scope: null,
+90 silly cache add   name: 'bindings',
+90 silly cache add   rawSpec: '1.1.x',
+90 silly cache add   spec: '>=1.1.0 <1.2.0',
+90 silly cache add   type: 'range' }
+91 verbose addNamed bindings@>=1.1.0 <1.2.0
+92 silly addNamed semver.valid null
+93 silly addNamed semver.validRange >=1.1.0 <1.2.0
+94 silly addNameRange { name: 'bindings', range: '>=1.1.0 <1.2.0', hasData: false }
+95 silly mapToRegistry name bindings
+96 silly mapToRegistry using default registry
+97 silly mapToRegistry registry https://registry.npmjs.org/
+98 silly mapToRegistry uri https://registry.npmjs.org/bindings
+99 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
+100 verbose request uri https://registry.npmjs.org/bindings
+101 verbose request no auth needed
+102 info attempt registry request try #1 at 19:34:59
+103 http request GET https://registry.npmjs.org/bindings
+104 http 200 https://registry.npmjs.org/bindings
+105 silly get cb [ 200,
+105 silly get   { date: 'Thu, 27 Nov 2014 22:35:00 GMT',
+105 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+105 silly get     etag: '"6SJRISMK25A1UDWM33HHCDB3Q"',
+105 silly get     'content-type': 'application/json',
+105 silly get     'cache-control': 'max-age=60',
+105 silly get     'content-length': '18313',
+105 silly get     'accept-ranges': 'bytes',
+105 silly get     via: '1.1 varnish',
+105 silly get     age: '29',
+105 silly get     'x-served-by': 'cache-jfk1034-JFK',
+105 silly get     'x-cache': 'HIT',
+105 silly get     'x-cache-hits': '1',
+105 silly get     'x-timer': 'S1417127700.507595,VS0,VE0',
+105 silly get     vary: 'Accept',
+105 silly get     'keep-alive': 'timeout=10, max=50',
+105 silly get     connection: 'Keep-Alive' } ]
+106 silly addNameRange number 2 { name: 'bindings', range: '>=1.1.0 <1.2.0', hasData: true }
+107 silly addNameRange versions [ 'bindings',
+107 silly addNameRange   [ '0.0.1',
+107 silly addNameRange     '0.1.0',
+107 silly addNameRange     '0.1.1',
+107 silly addNameRange     '0.2.0',
+107 silly addNameRange     '0.2.1',
+107 silly addNameRange     '0.2.2',
+107 silly addNameRange     '0.2.3',
+107 silly addNameRange     '0.2.4',
+107 silly addNameRange     '0.3.0',
+107 silly addNameRange     '0.4.0',
+107 silly addNameRange     '1.0.0',
+107 silly addNameRange     '1.1.0',
+107 silly addNameRange     '1.1.1',
+107 silly addNameRange     '1.2.0',
+107 silly addNameRange     '1.2.1' ] ]
+108 verbose addNamed bindings@1.1.1
+109 silly addNamed semver.valid 1.1.1
+110 silly addNamed semver.validRange 1.1.1
+111 silly mapToRegistry name bindings
+112 silly mapToRegistry using default registry
+113 silly mapToRegistry registry https://registry.npmjs.org/
+114 silly mapToRegistry uri https://registry.npmjs.org/bindings
+115 verbose addRemoteTarball https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz not in flight; adding
+116 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz',
+116 verbose addRemoteTarball   '951f7ae010302ffc50b265b124032017ed2bf6f3' ]
+117 info retry fetch attempt 1 at 19:35:00
+118 info attempt registry request try #1 at 19:35:00
+119 http fetch GET https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+120 http fetch 200 https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+121 silly fetchAndShaCheck shasum 951f7ae010302ffc50b265b124032017ed2bf6f3
+122 verbose addTmpTarball /tmp/npm-7058-3649f2c9/registry.npmjs.org/bindings/-/bindings-1.1.1.tgz not in flight; adding
+123 verbose addTmpTarball already have metadata; skipping unpack for bindings@1.1.1
+124 silly cache afterAdd bindings@1.1.1
+125 verbose afterAdd /root/.npm/bindings/1.1.1/package/package.json not in flight; writing
+126 verbose afterAdd /root/.npm/bindings/1.1.1/package/package.json written
+127 silly install resolved [ { name: 'bindings',
+127 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+127 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+127 silly install resolved     version: '1.1.1',
+127 silly install resolved     author:
+127 silly install resolved      { name: 'Nathan Rajlich',
+127 silly install resolved        email: 'nathan@tootallnate.net',
+127 silly install resolved        url: 'http://tootallnate.net' },
+127 silly install resolved     repository:
+127 silly install resolved      { type: 'git',
+127 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+127 silly install resolved     main: './bindings.js',
+127 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+127 silly install resolved     _id: 'bindings@1.1.1',
+127 silly install resolved     dist:
+127 silly install resolved      { shasum: '951f7ae010302ffc50b265b124032017ed2bf6f3',
+127 silly install resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz' },
+127 silly install resolved     _from: 'bindings@>=1.1.0 <1.2.0',
+127 silly install resolved     _npmVersion: '1.3.2',
+127 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+127 silly install resolved     maintainers: [ [Object], [Object] ],
+127 silly install resolved     directories: {},
+127 silly install resolved     _shasum: '951f7ae010302ffc50b265b124032017ed2bf6f3',
+127 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz' } ]
+128 info install bindings@1.1.1 into /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+129 info installOne bindings@1.1.1
+130 verbose installOne of bindings to /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port not in flight; installing
+131 verbose lock using /root/.npm/_locks/bindings-d2b02020cbd2774b.lock for /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+132 silly install write writing bindings 1.1.1 to /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+133 silly cache addNamed cb bindings@1.1.1
+134 verbose unbuild node_modules/bluetooth-serial-port/node_modules/bindings
+135 verbose gentlyRm vacuuming /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+136 verbose tar unpack /root/.npm/bindings/1.1.1/package.tgz
+137 verbose tar unpacking to /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+138 verbose gentlyRm vacuuming /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+139 silly gunzTarPerm modes [ '755', '644' ]
+140 silly gunzTarPerm extractEntry package.json
+141 silly gunzTarPerm extractEntry README.md
+142 silly gunzTarPerm extractEntry bindings.js
+143 info preinstall bindings@1.1.1
+144 silly install resolved []
+145 verbose about to build /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+146 info build /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+147 verbose linkStuff [ false,
+147 verbose linkStuff   false,
+147 verbose linkStuff   false,
+147 verbose linkStuff   '/home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules' ]
+148 info linkStuff bindings@1.1.1
+149 verbose linkBins bindings@1.1.1
+150 verbose linkMans bindings@1.1.1
+151 verbose rebuildBundles bindings@1.1.1
+152 info install bindings@1.1.1
+153 info postinstall bindings@1.1.1
+154 verbose unlock done using /root/.npm/_locks/bindings-d2b02020cbd2774b.lock for /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port/node_modules/bindings
+155 verbose about to build /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+156 info build /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+157 verbose linkStuff [ false,
+157 verbose linkStuff   false,
+157 verbose linkStuff   false,
+157 verbose linkStuff   '/home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules' ]
+158 info linkStuff bluetooth-serial-port@1.1.4
+159 verbose linkBins bluetooth-serial-port@1.1.4
+160 verbose linkMans bluetooth-serial-port@1.1.4
+161 verbose rebuildBundles bluetooth-serial-port@1.1.4
+162 verbose rebuildBundles [ 'bindings' ]
+163 info install bluetooth-serial-port@1.1.4
+164 verbose unsafe-perm in lifecycle false
+165 info bluetooth-serial-port@1.1.4 Failed to exec install script
+166 verbose unlock done using /root/.npm/_locks/bluetooth-serial-port-358e211b3d8c682b.lock for /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+167 verbose stack Error: bluetooth-serial-port@1.1.4 install: `node-gyp configure build`
+167 verbose stack Exit status 1
+167 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
+167 verbose stack     at EventEmitter.emit (events.js:98:17)
+167 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+167 verbose stack     at ChildProcess.emit (events.js:98:17)
+167 verbose stack     at maybeClose (child_process.js:756:16)
+167 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+168 verbose pkgid bluetooth-serial-port@1.1.4
+169 verbose cwd /home/gre3nlion/Documents/proyectos/iot-gdd/server
+170 error Linux 3.16.2-200.fc20.x86_64
+171 error argv "node" "/bin/npm" "install" "bluetooth-serial-port" "--save"
+172 error node v0.10.30
+173 error npm  v2.1.8
+174 error code ELIFECYCLE
+175 error bluetooth-serial-port@1.1.4 install: `node-gyp configure build`
+175 error Exit status 1
+176 error Failed at the bluetooth-serial-port@1.1.4 install script 'node-gyp configure build'.
+176 error This is most likely a problem with the bluetooth-serial-port package,
+176 error not with npm itself.
+176 error Tell the author that this fails on your system:
+176 error     node-gyp configure build
+176 error You can get their info via:
+176 error     npm owner ls bluetooth-serial-port
+176 error There is likely additional logging output above.
+177 verbose exit [ 1, true ]
+178 verbose unbuild node_modules/bluetooth-serial-port
+179 info preuninstall bluetooth-serial-port@1.1.4
+180 info uninstall bluetooth-serial-port@1.1.4
+181 verbose unbuild rmStuff bluetooth-serial-port@1.1.4 from /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules
+182 info postuninstall bluetooth-serial-port@1.1.4
+183 verbose gentlyRm vacuuming /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+184 silly gentlyRm purging /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules/bluetooth-serial-port
+185 silly gentlyRm quitting because other entries in /home/gre3nlion/Documents/proyectos/iot-gdd/server/node_modules

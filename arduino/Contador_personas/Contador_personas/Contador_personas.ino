@@ -18,16 +18,12 @@ void setup() {
 
 void loop()
 {
-  Serial.println("primero");
-  Serial.println(ultrasonic.Ranging(CM));
-  Serial.println("segundo");
-    Serial.println(ultra2.Ranging(CM));
   if(ultrasonic.Ranging(CM) < 45){    
     med1 = ultrasonic.Ranging(CM);
     if(sentido == 0 || sentido == 1){
       sentido = 1;
     }else{
-      Serial.println("salen");
+      Serial.println(0);
       tone(buzzer, 50, 500);
       delay(1000);
       reset();
@@ -38,7 +34,7 @@ void loop()
     if(sentido == 0 || sentido == 2){
       sentido = 2;
     }else{
-      Serial.println("entran");
+      Serial.println(1);
       tone(buzzer, 10, 1000); 
       delay(1000);
       reset();

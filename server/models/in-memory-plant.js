@@ -67,11 +67,18 @@ module.exports = {
 			newPlant.history.unshift(stats);
 			//Add statatistics instance
 			this.plants.unshift(newPlant);
+			plant = newPlant;
 		}
 		else {
 			plant.history.unshift(stats);
 			
 		}
-		callback();
+		//Converting to simpler version.
+		simplePlant = {
+				stats: stats,
+				status: plant.status,
+				id: id
+		};
+		callback(simplePlant);
 	}
 };

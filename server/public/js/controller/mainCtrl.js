@@ -15,8 +15,9 @@ var mainCtrl = function($scope, $http) {
  
 	socket.on('stats', function(data){
 		$scope.$apply(function(){
-			console.log('stats',data.currentStats);
-			$scope.stats= data.currentStats;
+			console.log('stats',data);
+			$scope.stats= data.stats;
+			$scope.status =data.status;
 		});
 	});
 	socket.on('predict', function(data){

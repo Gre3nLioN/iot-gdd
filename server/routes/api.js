@@ -43,11 +43,8 @@ module.exports = {
       };
       plantsDB.save(req.params.id, stats, 
         function(data){
-          var statusMsg = {
-           id:req.params.id,
-           currentStats: stats
-           
-        };
+
+          var statusMsg = data;
         //Emit the message to any active dashboard
         io.sockets.in(req.params.id).emit('stats',statusMsg);
         //return correct result

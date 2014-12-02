@@ -56,10 +56,6 @@ var io = require('socket.io')(server);
 io.sockets.on('connection', function (socket) {
   console.log("new connnect"); 
 
-  var onRoomMsg = {people: peopleCount};
-
-
-
   //some web-client disconnects
   socket.on('disconnect', function (socket) {
     console.log("disconnect");

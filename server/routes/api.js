@@ -21,7 +21,7 @@ module.exports = {
       
       plantsDB.predict(req.params.id, function(data){
         io.sockets.in(req.params.id).emit('predict',data);
-                var response = '/';
+        var response = '/';
         console.log(data);
         if (data.light ==="ON"){
           response +='WARM';
@@ -35,7 +35,7 @@ module.exports = {
         else {
           response += 'OFF';
         }
-      //return what arduino have to do
+     	//return what arduino have to do
         res.json(response);
       },function(e){
         res.status(500);
@@ -44,34 +44,31 @@ module.exports = {
       
   },
 
-	postStatus: function(req,res,io) {
- 
-  		console.log('postStatus',req.body );
+  postStatus: function(req,res,io) {
 
-  		var stats = {
-          envTemperature: parseFloat(req.body.envTemperature),
-          envHumidity: parseFloat(req.body.envHumidity),
-          soilTemperature: parseFloat(req.body.soilTemperature),
-          soilHumidity: parseFloat(req.body.soilHumidity)
-      };
+	  console.log('postStatus',req.body );
+
+	  var stats = {
+		  envTemperature: parseFloat(req.body.envTemperature),
+		  envHumidity: parseFloat(req.body.envHumidity),
+		  soilHumidity: parseFloat(req.body.soilHumidity)
+	  };
 
 
-      
-      plantsDB.save(req.params.id, stats, 
-        function(data){
 
-          var statusMsg = data;
-        //Emit the message to any active dashboard
-        io.sockets.in(req.params.id).emit('stats',statusMsg);
-        //return correct result
-        res.json({status:statusMsg, success:true});
-      },
-        function(e){
-          res.status(500);
-          res.json({error:e, success:false});
-      });
-      
-  		
+	 plantsDB.save(req.params.id, stats, 
+		function(data){
+
+			var statusMsg = data;
+			//Emit the message to any active dashboard
+			io.sockets.in(req.params.id).emit('stats',statusMsg);
+			//return correct result
+			res.json({status:statusMsg, success:true});
+		},
+		function(e){
+			res.status(500);
+			res.json({error:e, success:false});
+		});
 	},
 
 }

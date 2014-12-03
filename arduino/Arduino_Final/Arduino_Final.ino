@@ -13,7 +13,7 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 unsigned int port = 3000;
 String server = "192.168.1.100";  //here IP to connect with
 String postPath = "/api/v1/plant/stats";
-String getPath = "/api/v1/plant/status";
+String getPath = "/api/v1/plant/predict";
 float time=0.0f;
 #define TIMER_DELAY 1.0f
 float timer=TIMER_DELAY;
@@ -28,6 +28,7 @@ double T2,H; //DHT11 values
 double soilHumidity; //Humidity value
 
 #define PIN_VENTILADOR 42
+#define PIN_WATER 43
 #define PIN_LAMPARITA 44
 
 void setup() {
@@ -56,6 +57,7 @@ void setup() {
   }
   
   pinMode(PIN_LAMPARITA,OUTPUT);
+  pinMode(PIN_WATER,OUTPUT);
   pinMode(PIN_VENTILADOR,OUTPUT);
   digitalWrite(PIN_LAMPARITA,HIGH);
   digitalWrite(PIN_VENTILADOR,HIGH);
@@ -172,24 +174,23 @@ String parsearMensaje(const char * response, unsigned int len) {
 }
 
 void Acciones(String actuar){
+	//Light OFF
+    digitalWrite(PIN_LAMPARITA,HIGH);
+	//Cooler OFF
+    digitalWrite(PIN_VENTILADOR,HIGH);
+	//Water OFF
+    digitalWrite(PIN_WATER,HIGH);
   if(actuar.equals("COLD")){
     Serial.println("COLD");
     //Cooler ON
     digitalWrite(PIN_VENTILADOR,LOW);
-    //Light OFF
-    digitalWrite(PIN_LAMPARITA,HIGH);
-  }
-  else if(actuar.equals("WARM")){
+  } else if(actuar.equals("WARM")){
     Serial.println("WARM");
     //Light ON
     digitalWrite(PIN_LAMPARITA,LOW);
-    //Cooler OFF
-    digitalWrite(PIN_VENTILADOR,HIGH);
-  }
-  else{
-    //Cooler OFF
-    digitalWrite(PIN_VENTILADOR,HIGH);
-    //Light OFF
-    digitalWrite(PIN_LAMPARITA,HIGH);
+  }else if(actuar.equals("WATER")){
+    Serial.println("WATER");
+    //Water ON
+    digitalWrite(PIN_WATER,LOW);
   }
 }

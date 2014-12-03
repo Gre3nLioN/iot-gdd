@@ -1,4 +1,3 @@
-
 var express = require('express');
 var plantsDB = require('../models/in-memory-plant.js');
 var router = express.Router();
@@ -10,7 +9,7 @@ module.exports = {
   		console.log('getStatus',req.body );
 
       //if (p){
-        res.json('/' + "COLD");
+        // res.json('/' + "COLD");
       /*}
       else{
         res.json('/' + "");
@@ -18,7 +17,7 @@ module.exports = {
 
       //return what arduino have to do
 
-      /*
+      
       plantsDB.get(req.params.id, function(data){
 
         res.json({plant: data, success:true});
@@ -26,7 +25,7 @@ module.exports = {
         res.status(500);
         res.json({error:e, success:false});
       });
-  		*/
+  		
 	},
   predict: function(req, res,io) {
       console.log('predict',req.params.id );
@@ -42,7 +41,7 @@ module.exports = {
   },
 
 	postStatus: function(req,res,io) {
-  		//{"temp":"31.00","soilHumidity":"868.00","humidity":"34.00"}
+ 
   		console.log('postStatus',req.body );
 
   		var stats = {
@@ -51,8 +50,8 @@ module.exports = {
           soilTemperature: parseFloat(req.body.soilTemperature)
       };
 
-      res.json('OK');
-      /*
+    //   res.json('OK');
+      
       plantsDB.save(req.params.id, stats, 
         function(data){
 
@@ -66,7 +65,7 @@ module.exports = {
           res.status(500);
           res.json({error:e, success:false});
       });
-      */
+      
   		
 	},
 

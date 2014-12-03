@@ -11,7 +11,7 @@ DHT dht(DHTPIN, DHTTYPE);
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 unsigned int port = 3000;
-String server = "192.168.1.100";  //here IP to connect with
+String server = "192.168.1.77";  //here IP to connect with
 String postPath = "/api/v1/plant/stats/";
 String getPath = "/api/v1/plant/predict/";
 float time=0.0f;
@@ -26,7 +26,7 @@ bool posting; // or getting
 char Status;
 double T2,H; //DHT11 values
 double soilHumidity; //Humidity value
-String DeviceID = "arduino20";
+String DeviceID = "roberta";
 
 #define PIN_VENTILADOR 42
 #define PIN_WATER 43
@@ -97,11 +97,11 @@ void loop()
         //JSON: {"deviceId":"DeviceID","temp":"T","soilHumidity":"soilHumidity","humidity":"H"}
          String body = "{\"deviceId\":\"";
         body += DeviceID;
-        body += "\",\"temp\":\"";
+        body += "\",\"envTemperature\":\"";
         body += T2;
         body += "\",\"soilHumidity\":\"";
         body += soilHumidity;
-        body += "\",\"humidity\":\"";
+        body += "\",\"envHumidity\":\"";
         body += H;
         body += "\"}";
         Serial.print("Posteo: ");

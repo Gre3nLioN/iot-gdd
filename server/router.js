@@ -24,8 +24,8 @@ module.exports = {
 
 		//API
 		router.get('/api/v1/plant/:id', function(req,res){controllers.api.getStatus(req,res,io)});
-		router.post('/api/v1/plant/:id/stats', function(req,res){controllers.api.postStatus(req,res,io)});
-		router.get('/api/v1/plant/:id/predict', function(req,res){controllers.api.predict(req,res,io)});
+		router.post('/api/v1/plant/stats/:id', function(req,res){controllers.api.postStatus(req,res,io)});
+		router.get('/api/v1/plant/predict/:id', function(req,res){controllers.api.predict(req,res,io)});
 		
 
 		return router;

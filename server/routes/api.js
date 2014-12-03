@@ -6,18 +6,7 @@ var router = express.Router();
 module.exports = {
 
 	getStatus: function(req, res,io) {
-  		console.log('getStatus',req.body );
-
-      //if (p){
-        // res.json('/' + "COLD");
-      /*}
-      else{
-        res.json('/' + "");
-      }*/
-
-      //return what arduino have to do
-
-      
+  		console.log('getStatus',req.body );      
       plantsDB.get(req.params.id, function(data){
 
         res.json({plant: data, success:true});
@@ -32,7 +21,22 @@ module.exports = {
       
       plantsDB.predict(req.params.id, function(data){
         io.sockets.in(req.params.id).emit('predict',data);
-        res.json({plant: data, success:true});
+                var response = '/';
+        console.log(data);
+        if (data.light ==="ON"){
+          response +='WARM';
+        }
+        else if (data.ventilator === "ON"){
+          response +='COLD';
+        }
+        else if (data.irrigation === "ON"){
+          response +='WATER';
+        }
+        else {
+          response += 'OFF';
+        }
+      //return what arduino have to do
+        res.json(response);
       },function(e){
         res.status(500);
         res.json({error:e, success:false});
@@ -47,10 +51,11 @@ module.exports = {
   		var stats = {
           envTemperature: parseFloat(req.body.envTemperature),
           envHumidity: parseFloat(req.body.envHumidity),
-          soilTemperature: parseFloat(req.body.soilTemperature)
+          soilTemperature: parseFloat(req.body.soilTemperature),
+          soilHumidity: parseFloat(req.body.soilHumidity)
       };
 
-    //   res.json('OK');
+
       
       plantsDB.save(req.params.id, stats, 
         function(data){

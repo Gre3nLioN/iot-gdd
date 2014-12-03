@@ -11,8 +11,14 @@
 		        	<section class="app-bar-actions">
 		        	<!-- Put App Bar Buttons Here -->
 		        </div>
-		        <div class="stats">
-		        	<h2> Hola,<strong> Roberta </strong> esta bien </h2>
+		        <div class="stats red" ng-hide="stats">
+		        	<h1> :-(  </h1>
+		        	<h2> No tenemos informacion sobre <strong> {{device}} </strong></h2>
+		        	<h3> Estas seguro que esta conectada? </h3>
+		        </div>
+		        <div class="stats" ng-show="stats">
+		        
+		        	<h2> Hola,<strong> {{device}} </strong>{{copy}} </h2>
 		        	<h3><strong>Interno</strong>
 		        	<div class="stats-detail">
 		        		<div class="stat-header">

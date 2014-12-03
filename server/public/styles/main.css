@@ -3662,7 +3662,10 @@ div.error {
     background-color: rgb(146, 196, 109);
     color: #fff;
 }
+.stats.red{
+    background-color: rgb(181, 41, 57);
 
+}
 
 /* Progress Bar */
 .stats-detail{

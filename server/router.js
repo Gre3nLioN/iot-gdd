@@ -20,12 +20,13 @@ module.exports = {
 	initialize: function(io){
 		//Content
 		router.get('/', controllers.views.index);
-		router.get('/dashboard/:id', controllers.views.dashboard);
+		router.get('/dashboard/', controllers.views.dashboard);
 
 		//API
-		router.get('/api/v1/plant/:id', function(req,res){controllers.api.getStatus(req,res,io)});
-		router.post('/api/v1/plant/:id/stats', function(req,res){controllers.api.postStatus(req,res,io)});
-		router.get('/api/v1/plant/:id/predict', function(req,res){controllers.api.predict(req,res,io)});
+		router.get('/api/v1/plant/status', function(req,res){controllers.api.getStatus(req,res,io)});
+		router.post('/api/v1/plant/stats', function(req,res){controllers.api.postStatus(req,res,io)});
+		
+		router.get('/api/v1/plant/predict', function(req,res){controllers.api.predict(req,res,io)});
 
 		return router;
 	}

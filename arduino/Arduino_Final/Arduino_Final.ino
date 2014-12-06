@@ -181,7 +181,7 @@ String parsearMensaje(const char * response, unsigned int len) {
 
 void Acciones(String actuar){
 	//Light OFF
-    digitalWrite(PIN_LAMPARITA,HIGH);
+    digitalWrite(PIN_LAMPARITA,LOW);
 	//Cooler OFF
     digitalWrite(PIN_VENTILADOR,HIGH);
 	//Water OFF
@@ -189,11 +189,11 @@ void Acciones(String actuar){
   if(actuar.equals("COLD")){
     Serial.println("COLD");
     //Cooler ON
-    digitalWrite(PIN_VENTILADOR,LOW);
+    digitalWrite(PIN_LAMPARITA,HIGH);
   } else if(actuar.equals("WARM")){
     Serial.println("WARM");
     //Light ON
-    digitalWrite(PIN_LAMPARITA,LOW);
+    digitalWrite(PIN_VENTILADOR,LOW);
   }else if(actuar.equals("WATER")){
     Serial.println("WATER");
     //Water ON

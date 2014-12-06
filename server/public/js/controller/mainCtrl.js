@@ -50,3 +50,4 @@ var mainCtrl = function($scope, $http) {
 	$scope.copy = deviceCopy + '.';
 
 };
+	

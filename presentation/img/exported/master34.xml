@@ -1,0 +1,130 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="8"/>
+ </o:shapelayout><v:background id="_x0000_s8193" o:bwmode="white" fillcolor="#be0001">
+  <v:fill color2="#b2b2b2 [5]"/>
+ </v:background><p:shaperange id="_x0000_s8194">
+  <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+   <v:stroke joinstyle="miter"/>
+   <v:path gradientshapeok="t" o:connecttype="rect"/>
+  </v:shapetype><v:shape id="_x0000_s8194" type="#_x0000_t202" style='position:absolute;
+   left:667.375pt;top:375.75pt;width:52pt;height:21.5pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:middle' filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,1.2694mm,2.53958mm,1.2694mm"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="Shape_x0020_12">
+  <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+   o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Shape_x0020_12" o:spid="_x0000_s8195" type="#_x0000_t75"
+   style='position:absolute;left:33.125pt;top:381.5pt;width:38pt;height:8.875pt;
+   visibility:visible;mso-wrap-style:square' o:preferrelative="f">
+   <v:imagedata src="master27_image001.png" o:title=""/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="_x0000_s8196">
+  <v:shape id="_x0000_s8196" type="#_x0000_t202" style='position:absolute;
+   left:202.875pt;top:379.75pt;width:314.25pt;height:13.5pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:middle' o:gfxdata="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
+" filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="0,0,0,0"/>
+  </v:shape><v:shape id="_x0000_s8197" type="#_x0000_t202" style='position:absolute;
+   left:663.375pt;top:375.5pt;width:18pt;height:21.875pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:top' filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,1.2694mm,2.53958mm,1.2694mm"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="Shape_x0020_50">
+  <v:shape id="Shape_x0020_50" o:spid="_x0000_s8198" type="#_x0000_t75"
+   style='position:absolute;left:33.125pt;top:381.5pt;width:38pt;height:8.875pt;
+   visibility:visible;mso-wrap-style:square' o:preferrelative="f">
+   <v:imagedata src="master34_image003.png" o:title=""/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="_x0000_s8199">
+  <v:shape id="_x0000_s8199" type="#_x0000_t202" style='position:absolute;
+   left:202.875pt;top:379.25pt;width:314.25pt;height:13.5pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:middle' filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="0,0,0,0"/>
+  </v:shape><v:shape id="_x0000_s8200" type="#_x0000_t202" style='position:absolute;
+   left:667.375pt;top:375.75pt;width:52pt;height:21.5pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:middle' filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,1.2694mm,2.53958mm,1.2694mm"/>
+  </v:shape><v:shape id="_x0000_s8201" type="#_x0000_t202" style='position:absolute;
+   left:663.375pt;top:375.5pt;width:18pt;height:21.875pt;visibility:visible;
+   mso-wrap-style:square;v-text-anchor:top' filled="f" stroked="f">
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,1.2694mm,2.53958mm,1.2694mm"/>
+  </v:shape></p:shaperange>
+ <p:shaperange id="_x0000_m8202">
+  <v:shapetype id="_x0000_m8202" style='position:absolute;left:33.125pt;top:21.875pt;
+   width:652.5pt;height:51.125pt;visibility:visible;mso-wrap-style:square;
+   v-text-anchor:top' coordsize="21600,21600" o:master="" o:spt="202" path="m,l,21600r21600,l21600,xe"
+   filled="f" stroked="f">
+   <v:fill o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path arrowok="t" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,2.53958mm,2.53958mm,2.53958mm"/>
+   <p:placeholder type="title"/>
+  </v:shapetype></p:shaperange>
+ <p:shaperange id="_x0000_s8203">
+  <v:shapetype id="_x0000_s8203" style='position:absolute;left:33.125pt;top:89.5pt;
+   width:652.5pt;height:267.25pt;visibility:visible;mso-wrap-style:square;
+   v-text-anchor:top' coordsize="21600,21600" o:master="" o:spt="202" path="m,l,21600r21600,l21600,xe"
+   filled="f" stroked="f">
+   <v:fill o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path arrowok="t" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,2.53958mm,2.53958mm,2.53958mm"/>
+   <p:placeholder type="body" position="1"/>
+  </v:shapetype></p:shaperange>
+</xml>

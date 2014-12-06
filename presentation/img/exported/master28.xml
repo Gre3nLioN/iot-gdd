@@ -1,0 +1,33 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+ </o:shapelayout><v:background id="_x0000_s2049" o:bwmode="white" fillcolor="white [0]">
+  <v:fill color2="#d89f39 [5]"/>
+ </v:background><p:shaperange id="_x0000_m2050">
+  <v:shapetype id="_x0000_m2050" style='position:absolute;left:36pt;top:16.25pt;
+   width:9in;height:67.5pt;visibility:visible;mso-wrap-style:square;
+   v-text-anchor:bottom' coordsize="21600,21600" o:master="" o:spt="202"
+   path="m,l,21600r21600,l21600,xe" filled="f" stroked="f">
+   <v:fill o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path arrowok="t" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,2.53958mm,2.53958mm,2.53958mm"/>
+   <p:placeholder type="title"/>
+  </v:shapetype></p:shaperange>
+ <p:shaperange id="_x0000_s2051">
+  <v:shapetype id="_x0000_s2051" style='position:absolute;left:36pt;top:94.5pt;
+   width:9in;height:293.375pt;visibility:visible;mso-wrap-style:square;
+   v-text-anchor:top' coordsize="21600,21600" o:master="" o:spt="202" path="m,l,21600r21600,l21600,xe"
+   filled="f" stroked="f">
+   <v:fill o:detectmouseclick="t"/>
+   <v:stroke joinstyle="miter" o:forcedash="t"/>
+   <v:path arrowok="t" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" grouping="t"/>
+   <v:textbox style='mso-rotate-with-shape:t' inset="2.53958mm,2.53958mm,2.53958mm,2.53958mm"/>
+   <p:placeholder type="body" position="1"/>
+  </v:shapetype></p:shaperange>
+</xml>

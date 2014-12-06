@@ -3,3 +3,28 @@
 	bottom: -200px;
 	position: absolute;
 }
+
+.people-count {
+	opacity: 0.1;
+	z-index: 9999;
+}
+.people-count h2{
+	text-align: center;
+}
+
+.reveal .slides {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 50%;
+ top: 50%;
+ z-index: -1;
+}
+ul.logos{
+	display: table-caption;
+	float: left;
+	width: 30%;
+}
+.logos img{
+	max-width: 300px
+}

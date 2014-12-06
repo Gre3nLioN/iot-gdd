@@ -126,24 +126,21 @@ serial.on('found', function(address, name) {
 	serial.findSerialPortChannel(address, function(channel) {
 		serial.connect('00:13:01:24:71:78', channel, function() {
 			console.log('connected');
-       channel.on('data', function(data) {
-                console.log('Received: ' + data);
-            });
 			serial.on('data', function(buffer) {
         console.log(buffer);
-				if(buffer === 1){
-					router.post('/people/in', function(req,res){
-						io.emit('people-in', {});
-						peopleCount++;
-						res.json({result:'OK'});
-					});
-				}else if(buffer ===0){
-					router.post('/people/out', function(req,res){
-						io.emit('people-out', {});
-						peopleCount--;
-						res.json({result:'OK'});
-					});
-				}
+				// if(buffer === 1){
+				// 	router.post('/people/in', function(req,res){
+				// 		io.emit('people-in', {});
+				// 		peopleCount++;
+				// 		res.json({result:'OK'});
+				// 	});
+				// }else if(buffer ===0){
+				// 	router.post('/people/out', function(req,res){
+				// 		io.emit('people-out', {});
+				// 		peopleCount--;
+				// 		res.json({result:'OK'});
+				// 	});
+				// }
 			});
 		}, function () {
 			console.log('cannot connect');

@@ -19,8 +19,12 @@ var peopleInTheRoom = {
     enter: 0,
 }
  
- 
-
+var deviceId = 'roberta';
+socket.emit('room', deviceId);
+socket.on('stats', function(data){
+        $('.temperature').html(data.stats.envTemperature);   
+        $('.humidity').html(data.stats.soilHumidity);   
+});
 socket.on('new-noise', function(data){
     var roundedVol = Math.round(data.volume * 10);
     console.log('noise',roundedVol);
@@ -171,7 +175,7 @@ Reveal.addEventListener('slidechanged', function(event) {
                 ease: Power1.easeInOut
             }, .2);
         }
-        if (tag == "h4"){
+        if (tag == "h4" || tag == "h5"|| tag == "h6"){
             var contentOpenData = $(event.currentSlide.children[i]);
 
             contentSplit = new SplitText(contentOpenData, {

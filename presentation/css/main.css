@@ -28,3 +28,9 @@ ul.logos{
 .logos img{
 	max-width: 300px
 }
+img.force-70{width: 70%;}
+img.more-25{width: 125%;}
+img.more-50{width: 150%;}
+img.more-75{width: 175%;}
+img.double{	width: 200%;}
+img.triple{	width: 300%;}

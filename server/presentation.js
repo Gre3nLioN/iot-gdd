@@ -124,7 +124,7 @@ router.get('/noise', controllers.views.noise);
 
 serial.on('found', function(address, name) {
 	serial.findSerialPortChannel(address, function(channel) {
-		serial.connect('00:13:01:24:71:78', channel, function() {
+		serial.connect('98:D3:31:90:0B:C4', channel, function() {
 			console.log('connected');
 			serial.on('data', function(buffer) {
         console.log(buffer);

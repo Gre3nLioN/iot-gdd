@@ -34,3 +34,9 @@ img.more-50{width: 150%;}
 img.more-75{width: 175%;}
 img.double{	width: 200%;}
 img.triple{	width: 300%;}
+
+
+
+section.past, 
+section.future,
+section.present {top:-389px !important;}
